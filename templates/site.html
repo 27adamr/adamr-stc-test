@@ -1,0 +1,79 @@
+<!--
+Adam Richmond - submission to Save the Children Skills Assessment
+December 2022
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adam's Site</title>
+    {{ bootstrap.load_css() }}
+</head>
+
+<body onload="getData();">
+<div id="header-section" class="d-flex justify-content-left">
+    <div class="grid-container px-4">
+        <div class="row gy-10 " style="margin-bottom: 30px;">
+           <div class="col-6">
+                <div id="image-div">
+                        <img src="{{ image }}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="row gy-10 " style="margin-bottom: 30px;">
+            <div class="col-6">
+                <div id="donate">
+                    <btn class="btn btn-primary" onclick="location.href='https://www.savethechildren.org.uk/donate'">Donate</btn>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-10 " style="margin-bottom: 30px;">
+            <div class="col-6">
+                <div id="impact-title" >
+                    <h3>Total impact throughout 2022 so far: </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="statistics-sections" class="d-flex justify-content-left">
+    <div class="grid-container px-4" >
+        <div class="row gy-10 " style="margin-bottom: 20px;">
+            <div class="col-6" style="padding-left: 30px;  padding-right: 30px">
+                <h4>Survive</h4>
+                <div id="survive">
+                </div>
+            </div>
+            <div class="col-6" style="padding-left: 30px;  padding-right: 30px">
+                <h4>Learn</h4>
+                <div id="learn">
+                </div>
+            </div>
+        </div>
+        <div class="row gy-10" style="margin-bottom: 20px;">
+            <div class="col-6" style="padding-left: 30px;  padding-right: 30px">
+                <h4>Protect</h4>
+                <div id="protect">
+                </div>
+            </div>
+            <div class="col-6" style="padding-left: 30px;  padding-right: 30px">
+                <h4>Child Poverty</h4>
+                <div id="child_poverty">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+{{ bootstrap.load_css() }}
+</body>
+
+<script src="{{url_for('static', filename='site.js')}}"></script>
+
+</html>
